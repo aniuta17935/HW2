@@ -29,10 +29,10 @@ const answer: Observable<string> = combineLatest(
 ).pipe(
   map(([amount, length, interest]) => {
     try {
-      let am = parseInt(String(amount), 10);
-      let len = parseInt(String(length), 10);
-      let int = parseInt(String(interest), 10);
-      return calculateMortgage(int, am, len);
+      const amountNumber = parseInt(String(amount), 10);
+      const lengthtNumber = parseInt(String(length), 10);
+      const interesttNumber = parseInt(String(interest), 10);
+      return calculateMortgage(amountNumber, lengthtNumber, interesttNumber);
     } catch (error) {
       return String(error);
     }
